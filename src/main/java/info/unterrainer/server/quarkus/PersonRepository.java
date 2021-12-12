@@ -1,2 +1,19 @@
-package info.unterrainer.server.quarkus;public class PersonRepository {
+package info.unterrainer.server.quarkus;
+
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
+
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class PersonRepository implements PanacheRepository<Person> {
+
+    // put your custom logic here as instance methods
+
+    public Person findByName(String name){
+        return find("name", name).firstResult();
+    }
+
+    public void deleteStefs(){
+        delete("name", "Stef");
+    }
 }
