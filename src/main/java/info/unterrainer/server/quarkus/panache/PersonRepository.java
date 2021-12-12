@@ -1,4 +1,4 @@
-package info.unterrainer.server.quarkus;
+package info.unterrainer.server.quarkus.panache;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
