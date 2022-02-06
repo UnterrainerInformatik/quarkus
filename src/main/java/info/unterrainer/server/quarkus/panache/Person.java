@@ -9,8 +9,8 @@ import java.time.LocalDate;
 @Entity
 @Data
 public class Person extends PanacheEntity {
-    public String name;
-    public LocalDate birth;
+    private String name;
+    private LocalDate birth;
 
     public static Person findByName(String name){
         return find("name", name).firstResult();
