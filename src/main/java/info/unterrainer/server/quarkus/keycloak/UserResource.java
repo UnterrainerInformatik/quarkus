@@ -6,6 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import info.unterrainer.server.quarkus.dtos.User;
 import io.quarkus.security.identity.SecurityIdentity;
 
 @Path("/api/users")
@@ -19,18 +20,5 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public User me() {
         return new User(keycloakSecurityContext);
-    }
-
-    public static class User {
-
-        private final String userName;
-
-        User(SecurityIdentity securityContext) {
-            this.userName = securityContext.getPrincipal().getName();
-        }
-
-        public String getUserName() {
-            return userName;
-        }
     }
 }

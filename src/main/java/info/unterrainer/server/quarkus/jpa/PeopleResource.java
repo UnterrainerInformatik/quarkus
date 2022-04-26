@@ -1,5 +1,7 @@
-package info.unterrainer.server.quarkus.panache;
+package info.unterrainer.server.quarkus.jpa;
 
+import info.unterrainer.server.quarkus.dtos.Person;
+import info.unterrainer.server.quarkus.rest.PersonRepository;
 import io.quarkus.hibernate.orm.rest.data.panache.PanacheRepositoryResource;
 import io.quarkus.rest.data.panache.ResourceProperties;
 

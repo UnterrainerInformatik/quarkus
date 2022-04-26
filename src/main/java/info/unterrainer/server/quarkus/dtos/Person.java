@@ -1,4 +1,4 @@
-package info.unterrainer.server.quarkus.panache;
+package info.unterrainer.server.quarkus.dtos;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import lombok.Data;
@@ -11,12 +11,4 @@ import java.time.LocalDate;
 public class Person extends PanacheEntity {
     private String name;
     private LocalDate birth;
-
-    public static Person findByName(String name){
-        return find("name", name).firstResult();
-    }
-
-    public static void deleteStefs(){
-        delete("name", "Stef");
-    }
 }
