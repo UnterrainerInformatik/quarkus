@@ -1,4 +1,4 @@
-package info.unterrainer.server.quarkus.keycloak;
+package info.unterrainer.server.quarkus.rest;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;

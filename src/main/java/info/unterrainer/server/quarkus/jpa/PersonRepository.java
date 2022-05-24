@@ -1,4 +1,4 @@
-package info.unterrainer.server.quarkus.rest;
+package info.unterrainer.server.quarkus.jpa;
 
 import info.unterrainer.server.quarkus.dtos.Person;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
